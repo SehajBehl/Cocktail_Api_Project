@@ -1,0 +1,6 @@
+@Cocktail_Api_HostAddress = http://localhost:5291
+
+GET {{Cocktail_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
