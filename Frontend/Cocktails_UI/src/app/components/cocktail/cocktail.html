@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Random Cocktail</h1>
+
+  <button (click)="getCocktail()">Get Random Cocktail</button>
+
+  <p *ngIf="loading">Loading...</p>
+  <p *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <div *ngIf="cocktail" class="card">
+    <h2>{{ cocktail.strDrink }}</h2>
+    <img [src]="cocktail.strDrinkThumb" [alt]="cocktail.strDrink" width="250" />
+    <p><strong>Category:</strong> {{ cocktail.strCategory }}</p>
+    <p><strong>Alcoholic:</strong> {{ cocktail.strAlcoholic }}</p>
+    <p><strong>Glass:</strong> {{ cocktail.strGlass }}</p>
+    <p><strong>Instructions:</strong> {{ cocktail.strInstructions }}</p>
+  </div>
+</div>
